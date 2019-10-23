@@ -9,17 +9,11 @@ let app = express()
 // load parser
 app.use(parser.json())
 app.use(parser.urlencoded({ extended: true }));
-// app.use(express.static( __dirname + '/public/dist/public' ));
+app.use(express.static( __dirname + '/public/dist/public' ));
 
 
-// require('./server/config/database.js');
-// require('./server/config/routes.js')(app);
-
-
-app.get('/', (request, response) => {
-    response.send("Hello Express");
- });
-
+require('./server/config/database.js');
+require('./server/config/routes.js')(app);
 
 
 // App.listen

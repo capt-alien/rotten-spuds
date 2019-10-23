@@ -1,0 +1,16 @@
+<p>Movies</p>
+
+<button [routerLink]="['/new']">New Movie</button>
+
+{{errors | json}}
+
+<div *ngFor="let movie of movies" id="movie">
+    
+    <p>Title: {{movie.title}}</p>
+    <p>Year: {{movie.year}}</p>
+    <p>Summery: {{movie.summery}}</p>
+
+    <button routerLink="/show/{{movie._id}}">Details </button>
+    <button routerLink="/edit/{{movie._id}}">Edit </button>
+
+</div>
