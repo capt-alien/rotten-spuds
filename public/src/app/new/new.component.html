@@ -6,7 +6,7 @@
 {{ errors | json}}
 
 
-<form (submit="createMovie()") >
+<form (submit)="createMovie()" >
     Title: <input type="text" name="title" [(ngModel)]="newMovie.title"><br>
     Year Produced: <input type="text" name="year" [(ngModel)]="newMovie.year"><br>
     Summary: <input type="text" name="summery" [(ngModel)]="newMovie.summery"><br>

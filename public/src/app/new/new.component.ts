@@ -21,15 +21,14 @@ export class NewComponent implements OnInit {
     ngOnInit() {}
 
   createMovie(){
-    console.log("********TEST1******")
     const observable = this.http.postMovie(this.newMovie);
-    console.log("********TEST2******")
-
+    console.log("movie created")
     observable.subscribe((data:any)=>{
       console.log(data);
       if(data.message==='fail'){
         this.errors = data.error['message'];
       }else{
+        console.log("***SHOULD REDIRECT**")
         this.router.navigate['/']
       };
     })

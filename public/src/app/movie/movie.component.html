@@ -1,1 +1,12 @@
-<p>movie works!</p>
+<p>About That Spud:</p>
+<br>
+
+<button [routerLink]="['/']">Go Back</button>
+
+<p>Title: {{movie.title}}</p>
+<p>Year: {{movie.year}}</p>
+<p>Synopsis: {{movie.summery}}</p>
+
+
+<!-- DELETE GOES HERE-->
+<button (click)="deleteOneMovie(movie._id)">Delete</button>
