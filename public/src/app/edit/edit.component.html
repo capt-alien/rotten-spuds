@@ -1,13 +1,15 @@
-<p>edit works!</p>
+<p>Edit Movie</p>
 
 <button [routerLink]="['/']">Go Back</button>
 
 {{ errors | json}}
 
+<form (submit)="createMovie()" >
+
 
 <form (submit)="buttonSubmit(movie._id)">
-    Title:<input type="text" name="title", [(ngModel)]="movie.title"><br>
-    Year: <input type="number" name="year", [(ngModel)]="movie.year"><br>
-    Synopsis: <input type="text" name="summery", [(ngModel)]="movie.summery"><br>
+    Title:<input type="text" name="title" [(ngModel)]="movie.title" ><br>
+    Year: <input type="number" name="year" [(ngModel)]="movie.year" ><br>
+    Synopsis: <input type="text" name="summery" [(ngModel)]="movie.summery" ><br>
     <input type="submit" value="Bake Yer Spud!!">
 </form>

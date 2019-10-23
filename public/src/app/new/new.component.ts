@@ -16,7 +16,7 @@ export class NewComponent implements OnInit {
   errors;
 
   constructor(private http: HttpService, 
-              private router: Router) { }
+              private router: Router,) { }
 
     ngOnInit() {}
 
@@ -28,8 +28,7 @@ export class NewComponent implements OnInit {
       if(data.message==='fail'){
         this.errors = data.error['message'];
       }else{
-        console.log("***SHOULD REDIRECT**")
-        this.router.navigate['/']
+        this.router.navigate(['/'])
       };
     })
   }

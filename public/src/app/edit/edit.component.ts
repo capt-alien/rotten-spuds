@@ -27,7 +27,7 @@ export class EditComponent implements OnInit {
     })
   }
   getOnebyID(id){
-    const observable = this.http.updateMovie(id, this.movie);
+    const observable = this.http.getOnemovie(id);
     observable.subscribe((data:any)=>{
       console.log(data);
       this.movie = data
