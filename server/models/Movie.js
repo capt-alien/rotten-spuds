@@ -19,6 +19,13 @@ let movieSchema = new Schema({
         required:[true, "You need a summery of your new Movie"]
         // minlength:[4, "Name needs at least 4 Char."]
     }
+    rating:{
+        type:Number,
+        min:[0, "min rateing is zero taters"],
+        max:[5, "max rating is five taters],
+        required = [true, "You gotta put in yer taters"]
+
+    }
 }, {timestamp:true});
 
 // Model

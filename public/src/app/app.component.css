@@ -1,14 +1,14 @@
-#header{
-    width: auto;
-    height: auto;
-    /* border-style: double; */
-    /* border-color:black; */
-    padding:20px;
+#container{
+    min-width: 100%;
+    min-height: 100%;
+    background-color: red;
+    padding:30px;
 }
 #window{
     width: auto;
     height: auto;
     border-style: double;
     border-color:black;
+    background-color: red;
     padding:20px;
 }
